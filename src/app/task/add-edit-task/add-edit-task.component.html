@@ -1,0 +1,59 @@
+<div class="form-froup row">
+    <label class="col-sm-2 col-form-label">Task id</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="id"
+        placeholder="task id">
+    </div>
+    <label class="col-sm-2 col-form-label">Task Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="title"
+        placeholder="Enter task title">
+    </div>
+    <label class="col-sm-2 col-form-label">Task description</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="description"
+        placeholder="Enter task description">
+    </div>
+    <label class="col-sm-2 col-form-label">Date Added</label>
+    <div class="col-sm-10">
+        <input type="datetime-local" class="form-control" [(ngModel)]="dateAdded"
+        placeholder="Enter task date">
+    </div>
+    <label class="col-sm-2 col-form-label">Deadline</label>
+    <div class="col-sm-10">
+        <input type="datetime-local" class="form-control" [(ngModel)]="deadline"
+        placeholder="Enter task deadline">
+    </div>
+    <label class="col-sm-2 col-form-label">Task importance</label>
+    <div class="col-sm-10">
+        <select name="importance"  class="form-control" [(ngModel)]="importance">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+    </div>
+    <label class="col-sm-2 col-form-label">Task status</label>
+    <div class="col-sm-10">
+        <select name="importance"  class="form-control" [(ngModel)]="status">
+            <option value="Open">Open</option>
+            <option value="Inprogres">In progres</option>
+            <option value="Closed">Closed</option>
+          </select>
+    </div>
+    <label class="col-sm-2 col-form-label">Closed at</label>
+    <div class="col-sm-10">
+        <input type="datetime-local" class="form-control" [(ngModel)]="closedAt"
+        placeholder="Enter task closedAt">
+    </div> 
+</div>
+
+
+
+
+<button (click)="addTask()" *ngIf="task.id==0" class="btn btn-outline-primary mr-2">
+    Add
+</button>
+
+<button (click)="updateTask()" *ngIf="task.id!==0" class="btn btn-outline-primary mr-2">
+    Update
+</button>
