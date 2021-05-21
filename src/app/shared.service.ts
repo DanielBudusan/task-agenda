@@ -8,7 +8,7 @@ import {Task} from 'src/app/task.model';
   providedIn: 'root'
 })
 export class SharedService {
-  readonly APIUrl="http://52.168.37.57/api";
+  readonly APIUrl="https://52.168.37.57/api";
   
 
   constructor(private http:HttpClient) { }
